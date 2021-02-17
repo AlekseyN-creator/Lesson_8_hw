@@ -1,0 +1,476 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
+
+/* Обнуляющие стили */
+
+/* убираем отступы внеш/внут, рамки
+ и прибавление рамок padding */
+*,
+*::before,
+*::after {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	box-sizing: border-box;
+}
+/* убираем декорацию у пунктов списка */
+li {
+	list-style: none;
+}
+/* убираем подчеркивание ссылок */
+a,
+a:visited {
+	text-decoration: none;
+}
+/* убираем декорацию ссылок 
+при наведении */
+a:hover {
+	text-decoration: none;
+}
+/* обнуляем заголовки */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: inherit;
+}
+/* убираем фантомный отступ у картинки */
+img {
+	vertical-align: top;
+}
+body {
+	line-height: 1;
+	color: #000;
+	padding: 10px 10px 50px 10px;
+	background-image: url("../img/thumb_l_shut_217.jpg");
+}
+
+/* Обнуляющие стили закончились */
+
+p {
+	margin: 0px 0px 30px 0px;
+}
+
+.header {
+	max-width: 98%;
+	background-color: rgb(114, 144, 62);
+	margin: 50px auto;
+	opacity: 0.9;
+	border-radius: 30px;
+}
+/* Псевдоклассы состояния */
+header:hover {
+	background-color: yellowgreen;
+	opacity: 0.8;
+}
+.list li {
+	text-transform: uppercase;
+	font-weight: 700;
+	display: block;
+	padding: 10px;
+	display: inline-block;
+	margin: 10px 52px 10px 52px;
+}
+
+a {
+	max-width: 350px;
+	max-height: 40px;
+	background-color: rgba(246, 160, 55, 0.815);
+	border-radius: 25px;
+	padding: 5px;
+	box-shadow: 0px 5px 10px 2px #000;
+	color: rgb(5, 9, 255);
+}
+/* Псевдокласс состояния :hover срабаатывает
+при наведении на элемент. Часто применятеся как 
+для ссылок, так и для любого другого элемента */
+a:hover {
+	background-color: aqua;
+	box-shadow: 0px 5px 0px 2px #000;
+	color: rgb(22, 0, 149);
+}
+
+.block {
+	text-transform: lowercase;
+	color: rgb(0, 0, 0);
+	background-color: tomato;
+	line-height: 2;
+	font-size: 20;
+	letter-spacing: 5px;
+	padding: 50px;
+	text-align: center;
+	text-indent: 60px;
+	max-width: 800px;
+	margin: 30px auto;
+}
+
+.block:hover {
+	border-radius: 50px;
+	border: 2px solid black;
+	box-shadow: 0px 5px 15px 10px tomato;
+	background-color: chocolate;
+}
+
+.block:active {
+	opacity: 0.8;
+	background-color: rgb(199, 119, 62);
+	box-shadow: 0px 5px 2px 2px rgb(255, 71, 39);
+}
+
+.footer {
+	max-width: 98%;
+	background-color: darkolivegreen;
+	margin: 50px auto;
+	opacity: 0.9;
+	border-radius: 30px;
+}
+
+.link {
+	visibility: hidden;
+}
+
+.list:hover .link {
+	visibility: visible;
+}
+
+.text {
+	max-width: 800px;
+	height: 800px;
+	background: yellowgreen url("../img/like.png") center / 75% no-repeat;
+	background-attachment: fixed;
+	margin: 30px auto;
+	padding: 30px;
+	border-radius: 50px;
+	line-height: 2;
+	font-size: 25px;
+	font-weight: 700;
+	text-indent: 50px;
+	text-transform: uppercase;
+	text-decoration: underline;
+	color: rgb(0, 0, 0);
+	border: 2px solid black;
+	box-shadow: 0px 5px 15px 10px limegreen;
+}
+
+.item {
+	visibility: hidden;
+}
+
+.subtext:hover + .item {
+	color: rgb(255, 0, 0);
+	visibility: visible;
+	font-style: italic;
+	font-size: 20px;
+	background-color: aliceblue;
+	text-align: center;
+	display: block;
+	border-radius: 30px;
+	padding: 20px;
+}
+
+.parent:hover .link__span {
+	color: #fff;
+	visibility: visible;
+	background-color: orange;
+}
+.link__span {
+	color: yellow;
+}
+
+mark:hover {
+	background-color: rgb(233, 215, 215);
+}
+
+div:hover {
+	background-color: #fff;
+}
+
+/* :active Срабатывает при нажатии на элемент. 
+В основном приенмяется к ссылкам и кнопкам */
+
+.link:active {
+	color: red;
+	background-color: powderblue;
+}
+
+.list a:active {
+	color: rgb(255, 0, 0);
+	background-color: rgb(233, 215, 215);
+	box-shadow: 0px 2px 1px 1px black;
+	border: 1px solid black;
+}
+
+mark:active {
+	background-color: yellowgreen;
+}
+
+/* :visited Срабатывает для посещенных ссылок */
+a:visited.link {
+	color: dimgrey;
+	background-color: rgb(172, 59, 59);
+}
+
+/* :focus Срабатывает при получении элементом фокуса. 
+Часто применяется к элементам форм. Например инпутам */
+a:focus {
+	/* выделил рамку и декорацию ссылки при переключении
+	табом */
+	outline: 3px dashed red;
+	color: red;
+	text-decoration: line-through;
+	text-decoration: underline;
+}
+
+/* :target Срабатывает когда элемент является 
+объектом на который ссылаютсяя */
+.open {
+	color: yellowgreen;
+	display: inline-block;
+	margin: 0px 0px 10px 0px;
+}
+
+.sub {
+	background-color: green;
+	padding: 15px;
+	display: none;
+}
+
+.sub:target {
+	display: block;
+}
+
+/* img */
+.image {
+	display: block;
+	margin: 30px auto;
+}
+
+.image:hover {
+	border-radius: 50px;
+	border: 2px solid black;
+	opacity: 0.5;
+}
+
+.image:active {
+	opacity: 0.9;
+	box-shadow: 0px 5px 10px 5px black;
+}
+
+/* ---------------------- */
+
+/* Псевдоклассы положения в коде */
+.example p {
+	margin: 0px 0px 30px 0px;
+	background-color: green;
+	padding: 15px;
+}
+/* :first-child Любой тег первый в блоке */
+.example *:first-child {
+	background-color: rgb(228, 38, 228);
+}
+/* Первый тег Р в блоке, если выше него ничего нет */
+/*
+.example p:first-child {
+	background-color: rgb(228, 38, 228);
+}
+*/
+/* :first-of-type Первый в блоке тег Р, даже если
+выше него есть другие */
+/*
+.example p:first-of-type {
+	background-color: red;
+}
+*/
+/* :last-child Обращение к последнему элементу в блоке */
+/* Любой последний тег в блоке */
+
+/* 
+.example *:last-child {
+	background-color: rgb(228, 38, 228);
+}
+*/
+
+/* Последний блок в теге Р, если ниже него
+ничего нет */
+/* 
+.example p:last-child {
+	background-color: rgb(228, 38, 228);
+}
+*/
+/* Последний в блоке тег Р, даже если ниже него есть
+другие ттеги */
+/*
+.example p:last-of-type {
+	background-color: red;
+}
+*/
+/*
+span:last-of-type {
+	background-color: yellow;
+}
+*/
+/* :nth-child(порядковый номер элемента) Обращение 
+к конкретным элементам в блоке */
+/*
+.example p:nth-child(1) {
+	background-color: yellow;
+}
+.example p:nth-last-child(3) {
+	background-color: violet;
+}
+.example p:nth-of-type(4) {
+	background-color: turquoise;
+}
+*/
+/* подкрасили нечетные объекты в одном блоке */
+.example p:nth-child(odd) {
+	background-color: tomato;
+}
+
+/* подкрасили четные объекты в одном блоке */
+.even p:nth-child(even) {
+	background-color: tomato;
+}
+
+/*==============================*/
+/* Псевдоэлементы */
+/* задает стиль первой строке в тексте */
+
+.elements p::first-line {
+	background-color: rgb(6, 255, 180);
+}
+
+.items {
+	background-color: rgba(168, 253, 99, 0.918);
+	padding: 15px;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+.items::before {
+	content: "";
+	width: 25px;
+	height: 19px;
+	display: inline-block;
+	background: url("../img/check.png") 0 0 no-repeat;
+}
+.items::after {
+	content: "";
+	width: 25px;
+	height: 19px;
+	display: inline-block;
+	background: url("../img/check.png") 0 0 no-repeat;
+}
+.list__example {
+	margin: 30px;
+}
+.list__example li {
+	padding: 0px 0px 0px 30px;
+	margin: 0px 0px 10px 0px;
+	background-color: rgba(255, 255, 0, 0.74);
+	line-height: 19px;
+}
+
+.list__example li::before {
+	content: "";
+	width: 30px;
+	height: 19px;
+	margin: 0px 0px 0px -30px;
+	display: inline-block;
+	background: #fff url("../img/check.png") 0 0 no-repeat;
+	vertical-align: top;
+}
+
+.red__dot li {
+	padding: 0px 0px 0px 30px;
+	margin: 30px 0px;
+	text-align: center;
+	background-color: rgba(255, 255, 0, 0.74);
+	line-height: 22px;
+}
+.red__dot li::before {
+	content: "";
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	margin: 0px 0px 0px -30px;
+	display: inline-block;
+	background-color: red;
+	vertical-align: top;
+}
+.red__dot li::after {
+	content: "";
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	margin: 0px 5px 0px 0px;
+	display: inline-block;
+	background-color: red;
+	vertical-align: top;
+}
+.red__dot li:hover::before {
+	content: "";
+	width: 20px;
+	height: 20px;
+	border-radius: 0%;
+	margin: 0px 0px 0px -30px;
+	display: inline-block;
+	background-color: rgb(247, 0, 255);
+	vertical-align: top;
+}
+.red__dot li:hover::after {
+	content: "";
+	width: 20px;
+	height: 20px;
+	border-radius: 0%;
+	margin: 0px 5px 0px 0px;
+	display: inline-block;
+	background-color: rgb(234, 0, 255);
+	vertical-align: top;
+}
+.red__dot li:active::before {
+	content: "";
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	margin: 0px 0px 0px -30px;
+	display: inline-block;
+	background-color: rgb(0, 4, 255);
+	vertical-align: top;
+}
+.red__dot li:active::after {
+	content: "";
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	margin: 0px 5px 0px 0px;
+	display: inline-block;
+	background-color: rgb(4, 0, 255);
+	vertical-align: top;
+}
+
+.red__dot li:active {
+	background-color: rgba(45, 255, 126, 0.897);
+	text-transform: uppercase;
+	text-decoration: overline;
+}
+.title {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-weight: 700;
+	margin: 0px 0px 50px 0px;
+	display: inline-block;
+}
+.title::after {
+	content: "";
+	height: 5px;
+	background-color: rgb(212, 0, 255);
+	display: block;
+	margin: 5px 0px 0px 0px;
+	max-width: 20%;
+	min-width: 50px;
+}
